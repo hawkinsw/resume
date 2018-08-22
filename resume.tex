@@ -1,0 +1,214 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{article} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+% To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+
+\bibliographystyle{abbrv}
+\renewcommand\refname{\textsc{Publications}}
+\makeatletter
+\renewcommand\@biblabel[1]{}
+\makeatother
+
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\par{\centering{\Huge Will \textsc{Hawkins}}\bigskip\par} % Your name
+
+\section{Personal Data}
+
+\begin{tabular}{rl}
+\textsc{Address:} & 1296 Mistymeadow Lane, Cincinnati, Ohio, U.S.A.\\
+\textsc{Phone:} & +1 864 386 2286\\
+\textsc{email:} & \href{mailto:hawkinsw@gmail.com}{hawkinsw@gmail.com}
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{tabular}{ll}
+\textsc{May} 2018 & PhD in \textsc{Computer Science}, \textbf{The University of Virginia}, Charlottesville, VA\\
+& ``Static Binary Rewriting to Improve Software Security, Safety and Reliability'' \\
+&\small Advisor: Dr. Jack \textsc{Davidson}\\
+&\\
+
+\textsc{May} 2016 & Master of \textsc{Computer Science}, \textbf{The University of Virginia}, Charlottesville, VA\\
+& ``Dynamic Canary Randomization for Improved Software Security'' \\
+&\small Advisor: Dr. Jack \textsc{Davidson}\\
+&\\
+
+\textsc{May} 2014 & Master of \textsc{Theological Studies}, \textbf{Wesley Theological Seminary}, Washington, DC\\
+& \makecell[l]{``Differences In Degree, Not Kind: The Liberation Theology Of Gustavo Gutierrez,\\ Leonardo Boff, Jon Sobrino, Juan Luis Segundo And The Theology Of Liberation \\ Of Pope John Paul II''} \\
+&\small Advisor: Dr. R. Kendall \textsc{Soulen}\\
+&\\
+
+\textsc{June} 2004 & \makecell[lt]{ B.S. in \textsc{Computer Science} \\ B.S. in \textsc{Computer Science/Mathematics}
+} \\
+&\textbf{Furman University}, Greenville, SC\\
+&In-Major GPA: 3.98/4.0\\
+&Overall GPA: 3.67/4.0 \\
+&\makecell[l]{Member of Phi Beta Kappa, Phi Eta Sigma and Upsilon Pi Epsilon. \\ Served as president of Upsilon Pi Epsilon and Furman chapter of \\ Association of Computing Machinery}\\
+
+\end{tabular}
+
+
+%----------------------------------------------------------------------------------------
+% ACADEMIC RESEARCH %----------------------------------------------------------------------------------------
+
+\section{Academic Research Projects}
+\begin{tabular}{r|p{11cm}}
+
+\textsc{Aug 2006 - July 2014} & \makecell[tl]{Team TECHx: Cyber Reasoning System for the DARPA Cyber \\ Grand Challenge} \\
+& \emph{Hackademic} \\
+& \footnotesize{Competed on a team of researchers from the University of Virginia and GrammaTech, Inc. in the Cyber Grand Challenge, a DARPA-sponsored ``competition to create automatic defensive systems capable of reasoning about flaws, formulating patches and deploying them on a network in real time.`` Along with other team members, developed a) defensive tools and strategy and b) a system in go to monitor and store high speed network traffic in real time (presented the tool at GopherCon 2017). The team finished second and received a \$1 million cash prize.} \\
+& Team TechX at CGC: \url{https://www.youtube.com/watch?v=CHdmYY-kyuA} \\
+& Presentation at GopherCon 2017: \url{https://www.youtube.com/watch?v=lD0Qx7ZB_MU} \\
+\multicolumn{2}{c}{} \\
+
+\textsc{Dec 2004 - Sep 2005} & Real Time Scheduling \\
+& \emph{Graduate Research Assistant} \\
+& \footnotesize{Extended a calculus for schedulability analysis for real time systems to include aperiodic tasks. Derived theoretical results with feasible region calculus. Implemented a real time system task admission system simulator to verify formal results. Published findings in the proceedings of the IEEE Real-time Systems Symposium.} \\
+\multicolumn{2}{c}{} \\
+
+\textsc{Summer, 2003} & Furman Distributed File System \\
+& \emph{Researcher and Developer} \\
+& \footnotesize{Designed and implemented FDFS with funding from Furman Advantage undergraduate research program. FDFS provides distributed file storage through MySQL databases and provides encryption of files in motion and at rest using custom encryption implementation. FDFS is implemented with \texttt{C} and \texttt{C++} and usable on Linux systems as a Kernel module. Published findings on the development, implementation and performance of FDFS.} \\
+\multicolumn{2}{c}{} \\
+
+\textsc{Fall, 2002} & LIMP Programming Language \\
+& \emph{Language Designer and Implementer} \\
+& \footnotesize{Designed and implemented LIMP, an interpreted programming language, as an independent research project. Constructed the interpreter with 5000 lines of \texttt{C++} code. Language features an English based programming paradigm with native support for easily accessing networked resources. Published findings on designing, implementing and benchmarking LIMP.} \\
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE 
+%----------------------------------------------------------------------------------------
+
+\section{Selected Work Experience}
+\begin{tabular}{r|p{11cm}}
+
+\textsc{Apr 2018 - Present} & Department of Computer Science - University of Virginia \\
+& \emph{Research Scientist}\\ 
+& \footnotesize{Working with a team of researchers on several ongoing NSF- and DoD-funded projects in software reliability and network security. Participating in the CFAR (Cyber Fault-tolerant Attack Recovery) program which focuses on analysis and transformation of binary programs (i.e., having no access to the program's source code or debugging symbols) to increase their safety, security and reliability. Using the static binary rewriter toolkit developed during my PhD research. Work involves understanding what makes software unreliable and vulnerable to attack (at the binary level) and using the static binary rewriter to address those shortcomings. Participating in the CHASE (Cyber-Hunting at Scale) program whose goal it is to develop technologies ``to detect and characterize novel attack vectors, collect the right contextual data, and disseminate protective measures both within and across enterprises.'' Work involves recreating and understanding malware campaigns, worms and botnets; gathering data for use in machine learning algorithms; mentoring and managing other researchers.}\\
+\multicolumn{2}{c}{ } \\
+
+%------------------------------------------------
+
+\textsc{Mar 2012 - July 2014} & Open Technology Institute \\
+& \emph{Technologist and Senior Technologist}\\ 
+& \footnotesize{Participated in development of OTI’s Commotion software project – a State Department- and Radio Free Asia-funded free, open-source communication tool that uses mobile phones, computers, and other wireless devices to create decentralized mesh networks – on embedded devices for the OpenWRT platform and led its development for Android-based devices using public Android SDKs and reverse-engineered functionality. Participated in three international Commotion deployments – one in India, and two in Tunisia - and supported a domestic deployment in Red Hook, Brooklyn. Contributed code to the Linux kernel to support an Ad-Hoc encryption mechanism known as Symmetric Authentication of Peers. Performed data analysis for OTI’s MeasurementLab platform – a consortium of research, industry, and public interest partners dedicated to providing an ecosystem for the open, verifiable measurement of global network performance – using Google BigQuery. Debugged and contributed code to the Internet2’s Network Diagnostic Toolkit server and client to achieve MeasurementLab platform goals. Co-authored successful grant applications to Radio Free Asia, the United States Agency for International Development and the United States State Department worth several million dollars. Mentored two student interns for the GNOME Outreach Program for Women.}\\
+\multicolumn{2}{c}{	} \\
+
+%------------------------------------------------
+
+\textsc{Jan 2007 - Mar 2012} & United States Naval Research Laboratory\\
+& \emph{Computer Scientist} \\
+& \footnotesize{Analyzed new technologies and made recommendations for their use within the Department of Defense. Developed software and protocols for dynamic discovery of Type 1 Internet Protocol (IP) encryptors for the Defense Information Systems Agency (DISA) that were later integrated in \href{https://frrouting.org/}{FRRouting}. Co-authored academic and government papers on protocols and software related to dynamic discovery of Type 1 IP encryptors for DISA. Developed handheld situational awareness applications for iPhone and Android devices using public SDKs and reverse-engineered, unpublished APIs. Deployed and debugged high speed data connections using UDP-based Data Transport, an application-level protocol ``which is fast over network
+s with high bandwidth delay products, fair to other high volume data streams, and friendly to TCP-based flows.`` Developed Geographic Information System (GIS) software for iPhone and Android devices. Developed software in support of new Session Initiation Protocol based architectures. Tested and measured network design patterns and implementations. Extended OpenVPN, GAIM (now Pidgin), Adium, Quagga and OpenGroupware to support NRL research work.}\\
+\multicolumn{2}{c}{} \\
+
+%------------------------------------------------
+
+\textsc{Nov 2005 - Jan 2007} & Office of United States Senator from Minnesota\\
+& \emph{Systems Administrator} \\
+& \footnotesize{Supported more than 60 users in DC and state offices. Administered three Windows 2003 Print, File and Database Servers and one Linux database and web server. Developed solutions for monitoring constituent calls using a combination of Linux, PERL, MySQL, Apache and Sendmail. Developed a solution for viewer interaction during town hall meeting (U.S. Attorney General in attendance). Developed an extension to Microsoft Outlook 2003 to automatically report suspicious email messages to the corporate SPAM filter. Created written documentation for users and fellow administrators.}
+\end{tabular}
+
+
+
+%----------------------------------------------------------------------------------------
+%	VOLUNTEER EXPERIENCE 
+%----------------------------------------------------------------------------------------
+\section{Selected Volunteer Experience}
+\begin{tabular}{r|p{11cm}}
+
+\textsc{Apr 2018 - Present} & Cincinnati Golang Meetup\\
+& \emph{Co-organizer} \\
+& \footnotesize{Organizing, arranging speakers, building workshops for Cincinnati's only Golang meetup.} \\
+\multicolumn{2}{c}{} \\
+
+\textsc{Apr 2018 - Present} & Per Scholas\\
+& \emph{Volunteer IT Instructor and Tutor} \\
+& \footnotesize{Serving weekly as a volunteer IT instructor and tutor at Per Scholas, a national program that ``open doors to transformative technology careers for individuals from often overlooked communities.''} \\
+\multicolumn{2}{c}{} \\
+
+\textsc{Aug 2016 - Present} & Wesley Chapel Mission Center\\
+& \emph{Board Member and Volunteer} \\
+& \footnotesize{Serving on the Grounds and Governance Committees. Assisting with minor facility repairs in the non-profit's three properties and offices. Coordinating policies for recruitment of new board members and developing procedures for managing existing board members, staff and budget. Volunteering with reading groups and at special events.} \\
+\multicolumn{2}{c}{} \\
+
+\textsc{Jan 2015 - July 2016} & Loaves and Fishes\\
+& \emph{Shift Leader and Volunteer} \\
+& \footnotesize{Coordinated the training of volunteers who came to work a shift at the food pantry. Guided 15-20 volunteers through their shift after introducing them the food distribution process. Assisted with the pantry's information technology system for registering and tracking client visits.} \\
+\multicolumn{2}{c}{} \\
+
+\textsc{Aug 2006 - July 2014} & DC Young Professionals Chapter of Kiwanis International\\
+& \emph{Service Committee Co-Chairperson and Member} \\
+& \footnotesize{Coordinated with local non-profit and volunteer organizations to discover worthwhile service projects, generated interest in the service projects among the club's membership and organized the details (parking, attendance, rides, etc). Planned and executed several special service projects throughout the year (e.g., Halloween Carnivals and Spring Festivals at Boys and Girls Clubs in DC). } \\
+\multicolumn{2}{c}{} \\
+
+\textsc{Aug 2009 - July 2014} & Sunday Suppers\\
+& \emph{Executive Director and Volunteer} \\
+& \footnotesize{Executed Sunday Suppers for 150 homeless persons on a weekly basis. Coordinated the weekly volunteers necessary for food distribution and fellowship.}
+\end{tabular}
+
+
+%----------------------------------------------------------------------------------------
+% PUBLICATIONS %----------------------------------------------------------------------------------------
+
+% Begin output of publications.
+\nocite{*}
+\bibliography{resume}
+\end{document}
